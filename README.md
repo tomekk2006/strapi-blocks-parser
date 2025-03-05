@@ -1,11 +1,26 @@
 # blocks-renderer
- Outputs a html string from a Strapi Blocks Rich Text
+Parses a Strapi Blocks json into a HTML string
 
 ## Installation
 ```
 npm install strapi-blocks-renderer
 ```
+## Functions
+`renderBlocks(blocks)`
 
+Description: Parses Blocks Rich Text into a HTML string.
+
+|Parameter|Type |
+|---------|-----|
+|blocks   |Array|
+
+`encodeHtml(string)`
+
+Description: Converts HTML characters into [Character Entities](https://www.w3schools.com/html/html_entities.asp)
+
+|Parameter|Type  |
+|---------|------|
+|string   |string|
 ## Simple Usage
 ```javascript
 import {renderBlocks} from 'strapi-blocks-renderer'
