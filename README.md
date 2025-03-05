@@ -2,7 +2,9 @@
  Outputs a html string from a Strapi Blocks Rich Text
 
 ## Installation
-```npm install strapi-blocks-renderer```
+```
+npm install strapi-blocks-renderer
+```
 
 ## Simple Usage
 ```javascript
