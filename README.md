@@ -6,7 +6,9 @@ Parses a Strapi Blocks json into a HTML string
 npm install strapi-blocks-renderer
 ```
 ## Functions
-`renderBlocks(blocks)`
+```javascript
+renderBlocks(blocks)
+```
 
 Description: Parses Blocks Rich Text into a HTML string.
 
@@ -14,7 +16,9 @@ Description: Parses Blocks Rich Text into a HTML string.
 |---------|-----|
 |blocks   |Array|
 
-`encodeHtml(string)`
+```javascript
+encodeHtml(string)
+```
 
 Description: Converts HTML characters into [Character Entities](https://www.w3schools.com/html/html_entities.asp)
 
