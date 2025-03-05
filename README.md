@@ -20,11 +20,14 @@ Description: Parses Blocks Rich Text into a HTML string.
 encodeHtml(string)
 ```
 
-Description: Converts HTML characters into [Character Entities](https://www.w3schools.com/html/html_entities.asp)
+Description: Converts some* HTML characters into [Character Entities](https://www.w3schools.com/html/html_entities.asp)
 
 |Parameter|Type  |
 |---------|------|
 |string   |string|
+
+*These are the characters that get converted: "<", ">", "&".
+
 ## Simple Usage
 ```javascript
 import {renderBlocks} from 'strapi-blocks-renderer'
