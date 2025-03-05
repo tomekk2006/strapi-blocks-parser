@@ -1,0 +1,191 @@
+[
+    {
+    "type": "heading",
+    "children": [
+        {
+        "type": "text",
+        "text": "hea"
+        },
+        {
+        "type": "text",
+        "text": "ding1",
+        "italic": true
+        }
+    ],
+    "level": 1
+    },
+    {
+    "type": "heading",
+    "children": [
+        {
+        "type": "text",
+        "text": "head"
+        },
+        {
+        "type": "text",
+        "text": "ing2",
+        "bold": true
+        }
+    ],
+    "level": 2
+    },
+    {
+    "type": "heading",
+    "children": [
+        {
+        "type": "text",
+        "text": "heading3"
+        }
+    ],
+    "level": 3
+    },
+    {
+    "type": "paragraph",
+    "children": [
+        {
+        "type": "text",
+        "text": "never "
+        },
+        {
+        "type": "text",
+        "text": "bye",
+        "bold": true
+        },
+        {
+        "type": "text",
+        "bold": true,
+        "text": " ",
+        "underline": true,
+        "strikethrough": true
+        },
+        {
+        "text": "bye",
+        "type": "text",
+        "underline": true,
+        "strikethrough": true
+        },
+        {
+        "type": "text",
+        "text": "."
+        }
+    ]
+    },
+    {
+    "type": "paragraph",
+    "children": [
+        {
+        "type": "text",
+        "text": "lorem ipsum"
+        }
+    ]
+    },
+    {
+    "type": "paragraph",
+    "children": [
+        {
+        "text": "",
+        "type": "text"
+        },
+        {
+        "type": "link",
+        "url": "https://www.google.com",
+        "children": [
+            {
+            "type": "text",
+            "text": "link"
+            }
+        ]
+        },
+        {
+        "text": "",
+        "type": "text"
+        }
+    ]
+    },
+    {
+    "type": "list",
+    "format": "unordered",
+    "children": [
+        {
+        "type": "list-item",
+        "children": [
+            {
+            "type": "text",
+            "text": "item1"
+            }
+        ]
+        },
+        {
+        "type": "list-item",
+        "children": [
+            {
+            "type": "text",
+            "text": "item2"
+            }
+        ]
+        }
+    ]
+    },
+    {
+    "type": "list",
+    "format": "ordered",
+    "children": [
+        {
+        "type": "list-item",
+        "children": [
+            {
+            "text": "$ sudo apt install vim",
+            "type": "text",
+            "code": true
+            }
+        ]
+        },
+        {
+        "type": "list-item",
+        "children": [
+            {
+            "type": "text",
+            "text": "world"
+            }
+        ]
+        }
+    ]
+    },
+    {
+    "type": "quote",
+    "children": [
+        {
+        "type": "text",
+        "text": "this happened once to a guy"
+        }
+    ]
+    },
+    {
+    "type": "paragraph",
+    "children": [
+        {
+        "type": "text",
+        "text": ""
+        }
+    ]
+    },
+    {
+    "type": "code",
+    "children": [
+        {
+        "type": "text",
+        "text": "class hello:\n    const world = \"this is awesome\";"
+        }
+    ],
+    "language": "javascript"
+    },
+    {
+    "type": "paragraph",
+    "children": [
+        {
+        "type": "text",
+        "text": ""
+        }
+    ]
+    }
+]
