@@ -72,7 +72,7 @@ function renderBlocks(blocks) {
                 break;
         }
     });
-    const htmlString = htmlElements.join("");
+    const htmlString = htmlElements.join("\n");
     return htmlString;
 }
 
