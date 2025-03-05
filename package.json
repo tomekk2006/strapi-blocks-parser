@@ -1,10 +1,10 @@
 {
-  "name": "blocks-renderer",
+  "name": "strapi-blocks-renderer",
   "version": "1.0.0",
-  "description": "Outputs a html string from a Strapi Blocks Rich Text",
+  "description": "Outputs a html string from a Strapi Blocks Rich Text json",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,6 @@
     "json",
     "strapi"
   ],
-  "author": "tomekk",
+  "author": "Tomasz Kloczko (https://github.com/tomekk2006)",
   "license": "MIT"
 }
