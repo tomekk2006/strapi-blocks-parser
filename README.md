@@ -1,4 +1,4 @@
-# blocks-renderer
+# Strapi Blocks Renderer
 Parses a Strapi Blocks json into a HTML string
 
 ## Installation
@@ -10,7 +10,7 @@ npm install strapi-blocks-renderer
 renderBlocks(blocks)
 ```
 
-Description: Parses Blocks Rich Text into a HTML string.
+Description: Parses Blocks Rich Text into a HTML string
 
 |Parameter|Type |
 |---------|-----|
@@ -26,7 +26,7 @@ Description: Converts some* HTML characters into [Character Entities](https://ww
 |---------|------|
 |string   |string|
 
-*These are the characters that get converted: "<", ">", "&".
+*These are the characters that get converted: **<**, **>**, **&**
 
 ## Simple Usage
 ```javascript
