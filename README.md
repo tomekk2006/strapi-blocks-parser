@@ -30,7 +30,7 @@ Description: Converts some* HTML characters into [Character Entities](https://ww
 
 ## Simple Usage
 ```javascript
-import {renderBlocks} from 'strapi-blocks-renderer'
+import {renderBlocks} from 'strapi-blocks-parser'
 const content = [
     {type: "heading", level: 1, children: [{type: "text", text: "Welcome User"}]},
     {type: "paragraph", children: [{type: "text", italic: true, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}]}
