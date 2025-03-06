@@ -1,5 +1,5 @@
 {
-  "name": "strapi-blocks-renderer",
+  "name": "strapi-blocks-parser",
   "version": "1.0.0",
   "description": "Outputs a html string from a Strapi Blocks Rich Text json",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/tomekk2006/blocks-renderer"
+    "url": "github.com/tomekk2006/strapi-blocks-parser"
   },
   "keywords": [
     "html",

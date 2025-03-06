@@ -1,3 +1,3 @@
-const {renderBlocks} = require("./index");
+const {renderBlocks: parseBlocks} = require("./index");
 const sampleData = require("./content.json");
-console.log(renderBlocks(sampleData));
+console.log(parseBlocks(sampleData));

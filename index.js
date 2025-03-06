@@ -1,11 +1,11 @@
-class Render {
+class Block {
     static heading(block) {
-        const childrenElements = renderBlocks(block.children);
+        const childrenElements = parseBlocks(block.children);
         const htmlString = `<h${block.level}>${childrenElements}</h${block.level}>`;
         return htmlString; // example output: <h1>Hello world!</h1>
     }
     static paragraph(block) {
-        const childrenElements = renderBlocks(block.children);
+        const childrenElements = parseBlocks(block.children);
         const htmlString = `<p>${childrenElements}</p>`;
         return htmlString; // example output: <p>Hello world!</p>
     }
@@ -19,7 +19,7 @@ class Render {
         return text;
     }
     static link(block) {
-        const childrenElements = renderBlocks(block.children);
+        const childrenElements = parseBlocks(block.children);
         const htmlString = `<a href="${block.url}">${childrenElements}</a>`;
         return htmlString; // example output: <a href="/page">Hello world!</a>
     }
@@ -27,7 +27,7 @@ class Render {
         const listItems = new Array();
         block.children.forEach((item) => {
             if (item.type === "list-item") {
-                listItems.push("<li>"+renderBlocks(item.children)+"</li>");
+                listItems.push("<li>"+parseBlocks(item.children)+"</li>");
             }
         });
         const htmlString = listItems.join("");
@@ -35,7 +35,7 @@ class Render {
         if (block.format === "unordered") return "<ul>"+htmlString+"</ul>";
     }
     static codeBlock(block) {
-        const childrenElements = renderBlocks(block.children);
+        const childrenElements = parseBlocks(block.children);
         const htmlString = `<pre><code>${childrenElements}</code></pre>`;
         return htmlString; // example output: <pre><code>Hello world!</code></pre>
     }
@@ -44,39 +44,39 @@ class Render {
         return htmlString; // example output: <img src="image.png" alt="alternative text">Hello world!</img>
     }
     static quote(block) {
-        const childrenElements = renderBlocks(block.children);
+        const childrenElements = parseBlocks(block.children);
         const htmlString = `<blockquote>${childrenElements}</blockquote>`;
         return htmlString; 
     }
 }
 
-function renderBlocks(blocks) {
+function parseBlocks(blocks) {
     let htmlElements = new Array();
     blocks.forEach((block) => {
         switch (block.type) {
             case "heading":
-                htmlElements.push(Render.heading(block));
+                htmlElements.push(Block.heading(block));
                 break;
             case "paragraph":
-                htmlElements.push(Render.paragraph(block));
+                htmlElements.push(Block.paragraph(block));
                 break;
             case "text":
-                htmlElements.push(Render.text(block));
+                htmlElements.push(Block.text(block));
                 break;
             case "link":
-                htmlElements.push(Render.link(block));
+                htmlElements.push(Block.link(block));
                 break;
             case "list":
-                htmlElements.push(Render.list(block));
+                htmlElements.push(Block.list(block));
                 break;
             case "code":
-                htmlElements.push(Render.codeBlock(block));
+                htmlElements.push(Block.codeBlock(block));
                 break;
             case "image":
-                htmlElements.push(Render.image(block));
+                htmlElements.push(Block.image(block));
                 break;
             case "quote":
-                htmlElements.push(Render.quote(block));
+                htmlElements.push(Block.quote(block));
                 break;
         }
     });
@@ -107,4 +107,4 @@ function encodeHtml(string) {
     return encodedString;
 }
 
-module.exports = {renderBlocks, encodeHtml};
+module.exports = {renderBlocks: parseBlocks, encodeHtml};
