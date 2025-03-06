@@ -107,4 +107,4 @@ function encodeHtml(string) {
     return encodedString;
 }
 
-module.exports = {renderBlocks: parseBlocks, encodeHtml};
+module.exports = {parseBlocks, encodeHtml};
