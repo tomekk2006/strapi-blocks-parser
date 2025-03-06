@@ -41,7 +41,12 @@ class Render {
     }
     static image(block) {
         const htmlString = `<img src="${block.image.url}" alt="${block.image.alternativeText}">`;
-        return htmlString; // example output: <a href="/page">Hello world!</a>
+        return htmlString; // example output: <img src="image.png" alt="alternative text">Hello world!</img>
+    }
+    static quote(block) {
+        const childrenElements = renderBlocks(block.children);
+        const htmlString = `<blockquote>${childrenElements}</blockquote>`;
+        return htmlString; 
     }
 }
 
@@ -69,6 +74,9 @@ function renderBlocks(blocks) {
                 break;
             case "image":
                 htmlElements.push(Render.image(block));
+                break;
+            case "quote":
+                htmlElements.push(Render.quote(block));
                 break;
         }
     });
