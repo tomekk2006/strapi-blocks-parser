@@ -132,54 +132,9 @@
     {
       "type": "image",
       "image": {
-        "name": "Screenshot 2025-02-26 225620.png",
-        "alternativeText": "Screenshot 2025-02-26 225620.png",
-        "url": "http://localhost:1337/uploads/Screenshot_2025_02_26_225620_e58f1fc004.png",
-        "caption": null,
-        "width": 579,
-        "height": 539,
-        "formats": {
-          "thumbnail": {
-            "name": "thumbnail_Screenshot 2025-02-26 225620.png",
-            "hash": "thumbnail_Screenshot_2025_02_26_225620_e58f1fc004",
-            "ext": ".png",
-            "mime": "image/png",
-            "path": null,
-            "width": 168,
-            "height": 156,
-            "size": 58.19,
-            "sizeInBytes": 58192,
-            "url": "/uploads/thumbnail_Screenshot_2025_02_26_225620_e58f1fc004.png"
-          },
-          "small": {
-            "name": "small_Screenshot 2025-02-26 225620.png",
-            "hash": "small_Screenshot_2025_02_26_225620_e58f1fc004",
-            "ext": ".png",
-            "mime": "image/png",
-            "path": null,
-            "width": 500,
-            "height": 465,
-            "size": 432.77,
-            "sizeInBytes": 432773,
-            "url": "/uploads/small_Screenshot_2025_02_26_225620_e58f1fc004.png"
-          }
-        },
-        "hash": "Screenshot_2025_02_26_225620_e58f1fc004",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 143.89,
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-03-04T22:37:21.222Z",
-        "updatedAt": "2025-03-04T22:37:21.222Z"
-      },
-      "children": [
-        {
-          "type": "text",
-          "text": ""
-        }
-      ]
+        "alternativeText": "image of a dog",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg"
+      }
     },
     {
       "type": "quote",

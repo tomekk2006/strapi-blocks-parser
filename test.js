@@ -1,3 +1,3 @@
 const {parseBlocks} = require("./index");
-const sampleData = require("./content.json");
+const sampleData = require("./testdata.json");
 console.log(parseBlocks(sampleData));
