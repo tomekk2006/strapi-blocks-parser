@@ -1,5 +1,5 @@
 # Strapi Blocks Parser
-Parses a Strapi Blocks json into a HTML string
+Parses a Strapi Blocks rich text data into a HTML string
 
 ## Installation
 ```
