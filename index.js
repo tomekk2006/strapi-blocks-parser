@@ -80,7 +80,7 @@ function parseBlocks(blocks) {
                 break;
         }
     });
-    const htmlString = htmlElements.join("\n");
+    const htmlString = htmlElements.join("");
     return htmlString;
 }
 
