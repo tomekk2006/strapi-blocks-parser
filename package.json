@@ -1,6 +1,6 @@
 {
   "name": "strapi-blocks-parser",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Outputs a html string from a Strapi Blocks Rich Text json",
   "main": "index.js",
   "scripts": {

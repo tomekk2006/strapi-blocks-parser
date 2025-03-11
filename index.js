@@ -1,11 +1,11 @@
 class Block {
     static heading(block) {
-        const childrenElements = parseBlocks(block.children);
+        const childrenElements = parseBlocks(block.children, {join_str:""});
         const htmlString = `<h${block.level}>${childrenElements}</h${block.level}>`;
         return htmlString; // example output: <h1>Hello world!</h1>
     }
     static paragraph(block) {
-        const childrenElements = parseBlocks(block.children);
+        const childrenElements = parseBlocks(block.children, {join_str:""});
         const htmlString = `<p>${childrenElements}</p>`;
         return htmlString; // example output: <p>Hello world!</p>
     }
@@ -19,7 +19,7 @@ class Block {
         return text;
     }
     static link(block) {
-        const childrenElements = parseBlocks(block.children);
+        const childrenElements = parseBlocks(block.children, {join_str:""});
         const htmlString = `<a href="${block.url}">${childrenElements}</a>`;
         return htmlString; // example output: <a href="/page">Hello world!</a>
     }
@@ -27,15 +27,15 @@ class Block {
         const listItems = new Array();
         block.children.forEach((item) => {
             if (item.type === "list-item") {
-                listItems.push("<li>"+parseBlocks(item.children)+"</li>");
+                listItems.push("\n    <li>"+parseBlocks(item.children)+"</li>");
             }
         });
-        const htmlString = listItems.join("");
+        const htmlString = listItems.join("")+"\n";
         if (block.format === "ordered") return "<ol>"+htmlString+"</ol>";
         if (block.format === "unordered") return "<ul>"+htmlString+"</ul>";
     }
     static codeBlock(block) {
-        const childrenElements = parseBlocks(block.children);
+        const childrenElements = parseBlocks(block.children, {join_str:""});
         const htmlString = `<pre><code>${childrenElements}</code></pre>`;
         return htmlString; // example output: <pre><code>Hello world!</code></pre>
     }
@@ -44,13 +44,13 @@ class Block {
         return htmlString; // example output: <img src="image.png" alt="alternative text">Hello world!</img>
     }
     static quote(block) {
-        const childrenElements = parseBlocks(block.children);
+        const childrenElements = parseBlocks(block.children, {join_str:""});
         const htmlString = `<blockquote>${childrenElements}</blockquote>`;
         return htmlString; 
     }
 }
 
-function parseBlocks(blocks) {
+function parseBlocks(blocks, options={}) {
     let htmlElements = new Array();
     blocks.forEach((block) => {
         switch (block.type) {
@@ -80,7 +80,13 @@ function parseBlocks(blocks) {
                 break;
         }
     });
-    const htmlString = htmlElements.join("");
+    let htmlString;
+    if ("join_str" in options) {
+        htmlString = htmlElements.join(options.join_str);
+    }
+    else {
+        htmlString = htmlElements.join("\n");
+    }
     return htmlString;
 }
 
