@@ -78,8 +78,7 @@ function parseBlocks(blocks, options={}) {
                 htmlElements.push(ParseBlock.paragraph(block));
                 break;
             case "text":
-                if ("encode_text" in options) htmlElements.push(ParseBlock.text(block, options));
-                else htmlElements.push(ParseBlock.text(block));
+                htmlElements.push(ParseBlock.text(block, options));
                 break;
             case "link":
                 htmlElements.push(ParseBlock.link(block));
@@ -108,6 +107,8 @@ function encodeHtml(string) {
         "<" :"&lt;",
         ">" :"&gt;",
         "&" :"&amp;",
+        "\"":"&quot;",
+        "\'":"&apos;"
     }
     let encodedString = "";
     // loop through each character
